@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <div class="img-container">
+            <img src="pexels-lum3n-44775-568370.jpg" alt="">
+        </div>
+        <div class="header-body-section">
+            <nav class="nav">
+                <div class="container container-nav">
+                    <div class="logo-container">
+                    <p>Get the App</p>
+                    </div>
+                    <ul>
+                        <li><a href="invester">invester relations</a></li> 
+                        <li><a href="restuarant">Add Restuarant</a></li>
+                        <li><a href="login">Login</a></li>
+                        <li><a href="signup">Sign up</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-body-content">
+                <div class="container container-header-body">
+                    <img class="zomato-logo" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png
+                " alt="">
+                <p class="header-body-section-discover">Discover The Best Food And Drinks In Nipani</p>
+                <div class="search-container">
+                    <div></div>
+                    <div class="search-item">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #060f1e;"></i>
+                        <input type="text" placeholder="search for restuarant cuisine or a dish">
+                    </div>
+                </div>  
+                    
+                </div>
+                
+            </div>
+        </div>
+   </header>
+   <section class="head-body">
+        <h3 id="myorder"><u>Order Now</u></h3>
+        <div class="img-con">
+            <div class="pimg">
+                <img src="pexels-dana-tentis-118658-262959.jpg" alt="">
+                <h1>Grilled Salmon</h1>
+                <h3>200/-</h3>
+            </div>
+            <div class="pimg">
+                <img src="pexels-fotios-photos-1279330.jpg" alt="">
+                <h1> Chinese Noodles</h1>
+                <h3>150/-</h3>
+            </div>
+            <div class="pimg">
+                <img src="pexels-willpicturethis-2641886.jpg" alt="">
+                <h1>Grilled Paneer tikka</h1>
+                <h3>320/-</h3>
+            </div>
+            <div class="pimg">
+                <img src="pexels-julieaagaard-2097090.jpg" alt="">
+                <h1>Caesar Salad</h1>
+                <h3>100/-</h3>
+            </div>
+            
+        </div>
+      
+   </section>
+   <section class="head-body-drink">
+    <div class="img-con-dr">
+        <div class="pimgp">
+            <img src="j5.jpg" alt="">
+            <h1>Orange Juice</h1>
+            <h3>100/-</h3>
+        </div>
+        <div class="pimgp">
+            <img src="j2.jpg" alt="">
+            <h1>Mango Juice</h1>
+            <h3>150/-</h3>
+        </div>
+        <div class="pimgp">
+            <img src="j3.jpg" alt="">
+            <h1>Pineapple Juice</h1>
+            <h3>120/-</h3>
+        </div>
+        <div class="pimgp">
+            <img src="j4.jpg" alt="">
+            <h1>Coca-Cola</h1>
+            <h3>100/-</h3>
+        </div>
+        
+    </div>
+  
+    </section>
+
+    <section class="steps">
+      
+        <div class="step1">
+            <div class="phonelogo">
+                <img src="https://b.zmtcdn.com/data/o2_assets/ce5bc038a8a2d4f8f24465c8826182af1726501431.png" alt="">
+            </div>
+            <div class="datainfo">
+                <h1>Get the Zomato app</h1>
+                <p>We will send you a link, open it on your phone to download the app</p>
+                <div class="radiop">
+                    
+                   <input id="res" type="radio"><label for="">Email</label>
+                   <input id="des" type="radio"><label for="">Phone</label>
+                </div>
+                <div class="email">
+                  
+                  
+                       <input type="text" id="email-text" >
+                        <label for="text">Email</label>
+                   
+                </div> 
+                <div class="share">
+                    <button>Share App Link</button>
+                </div> 
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="term">
+       
+        <div class="test">
+            <h1>Zomato</h1>
+            <div class="term-con">
+           
+                <div class="list">
+                   <h6>About Zomato</h6>
+                   <ul>
+                    <li>
+                        Who We Are
+                    </li>
+                    <li>Blog</li>
+                    <li> Work With Us</li>
+                    <li>Investor Relations</li>
+                    <li>Report Fraud</li>
+                    <li>Press Kit</li>
+                    <li> Contact Us</li>
+                   </ul>
+                </div>
+                <div class="list">
+                    <h6>Zomaverse</h6>
+                   <ul>
+                    <li> Zomato</li>
+                    <li>Blinkit</li>
+                    <li> District</li>
+                    <li> Feeding India</li>
+                    <li> Hyperpure</li>
+                    <li> Zomato Live</li>
+                    <li> Zomaland</li>
+                    <li>Weather Union</li>
+                   </ul>
+                </div>
+               
+                <div class="list">
+                    <h6>For Restaurants</h6>
+                   <ul>
+                    <li> Partner With Us</li>
+                    <li> Apps For You</li>
+                    
+                   </ul>
+                </div>
+                <div class="list">
+                    <h6>Learn More
+                        Privacy
+                        
+                        Security
+                        
+                        Terms</h6>
+                   <ul>
+                    <li> Privacy</li>
+                    <li> Security</li>
+                    <li>Terms</li>
+                    
+                   </ul>
+                </div>
+            </div>   
+            
+        </div>
+    </section>
+</body>
+</html>
